@@ -14,44 +14,6 @@ FarmerAssist-Platform is an ASP.NET Core and C#-based application developed duri
 - C#
 - Microsoft SQL Server
 
-## Getting Started
-
-To set up the FarmerAssist-Platform locally, follow these steps:
-
-1. Clone the repository:
-
-    ```sh
-    git clone https://github.com/your-username/farmerassist-platform.git
-    ```
-
-2. Navigate to the project directory:
-
-    ```sh
-    cd farmerassist-platform
-    ```
-
-3. Install the required packages:
-
-    ```sh
-    dotnet restore
-    ```
-
-4. Update the database connection string in appsettings.json:
-
-    ```json
-    {
-      "ConnectionStrings": {
-        "DefaultConnection": "Your_SQL_Server_Connection_String"
-      }
-    }
-    ```
-
-5. Run the application:
-
-    ```sh
-    dotnet run
-    ```
-
 ## Usage
 
 Once the application is running, visit http://localhost:5000 to access the FarmerAssist-Platform. Farmers can post queries, and experts can provide quick and efficient solutions.
