@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebAPI.Models.Class1>
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+   
+
+@foreach (var item in Model) {
+   
+        <form action="/Admin/Edit/@Html.DisplayFor(modelItem => item.ID)" method="post">
+            <input readonly id="ID" name="ID" type="text"  class=" feedback-input" value="@Html.DisplayFor(modelItem => item.ID)" />
+            <input readonly id="PageID" name="PageID" type="text"  class=" feedback-input" value="
+            @Html.DisplayFor(modelItem => item.PageID)" />
+            <input readonly id="ProjectID" name="ProjectID" type="text"  class=" feedback-input" value="
+            @Html.DisplayFor(modelItem => item.ProjectID)" />
+
+            <input id="HelpTitle" name="HelpTitle" type="text" class="feedback-input" value="
+            @Html.DisplayFor(modelItem => item.HelpTitle)" />
+            <input id="HelpBody" name="HelpBody" class="feedback-input" value=" @Html.DisplayFor(modelItem => item.HelpBody)">
+            <input type="submit" value="SUBMIT" />
+        </form>
+    break;
+
+
+}
+
+

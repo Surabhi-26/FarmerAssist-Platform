@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebAPI.Models.Class1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="/home/index">Creat New</a>
+    
+</p>
+<form action="" method="get">
+    <label style="color:white;font-size:20px">Search</label>
+    <input name="id" type="number" class=" feedback-input" placeholder="Enter ID...">
+    <div class="search"></div>
+</form>
+<table class="table">
+    <tr>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.PageID)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.ProjectID)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.HelpTitle)
+        </th>
+        <th style="color:white">
+            @Html.DisplayNameFor(model => model.HelpBody)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="color:white">
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td style="color:white">
+            @Html.DisplayFor(modelItem => item.PageID)
+        </td>
+        <td style="color:white">
+            @Html.DisplayFor(modelItem => item.ProjectID)
+        </td>
+        <td style="color:white">
+            @Html.DisplayFor(modelItem => item.HelpTitle)
+        </td>
+        <td style="color:white">
+            @Html.DisplayFor(modelItem => item.HelpBody)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+
+</table>
